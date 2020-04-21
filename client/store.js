@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-
+const mtg = require('mtgsdk')
 Vue.use(Vuex)
 
 export default new Vuex.Store({
@@ -34,6 +34,14 @@ export default new Vuex.Store({
           break;
       }
     },
+
+    getcards({ commit, dispatch }, cardName) {
+      mtg.card.where({ name: cardName })
+        .then(results => {
+          console.log(results)
+          commit('setCards', results)
+        })
+    }
   },
   modules: {
   }
