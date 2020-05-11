@@ -1,6 +1,20 @@
 <template>
   <div class="lifetracker">
-    <div v-for="player in players" :key="player.id"></div>
+    <div class="container">
+      <div class="row">
+        <div v-for="player in players" :key="player.id">
+          <div class="col-5">
+            <div class="row">
+              <div class="col-12">{{player.name}}:{{player.health}}</div>
+              <div class="col-12">
+                <button @click="minusLife(player)">-1</button>
+                <button>+1</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -16,7 +30,14 @@ export default {
       return this.$store.players;
     }
   },
-  methods: {},
+  methods: {
+    minusLife(player) {
+      change = down;
+      payload = { player, change };
+      this.$store.dispatch("adjustLife", payload);
+    },
+    addLife(player) {}
+  },
   components: {}
 };
 </script>
