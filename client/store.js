@@ -41,6 +41,13 @@ export default new Vuex.Store({
           console.log(results)
           commit('setCards', results)
         })
+    },
+
+    getCard({ commit, dispatch }, id) {
+      mtg.card.find(id)
+        .then(result => {
+          commit('setCurrentCard', result)
+        })
     }
   },
   modules: {
