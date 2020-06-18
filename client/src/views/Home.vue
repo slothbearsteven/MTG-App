@@ -1,10 +1,13 @@
 <template>
-  <div class="home"></div>
+  <div class="home">
+    <lifetracker />
+  </div>
 </template>
 
 <script>
+import lifetracker from "../components/LifeTracker.vue";
 export default {
   name: "Home",
-  components: {}
+  components: { lifetracker }
 };
 </script>
