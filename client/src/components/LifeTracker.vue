@@ -5,10 +5,17 @@
         <div v-for="player in players" :key="player.id">
           <div class="col-6">
             <div class="row">
-              <div class="col-12">{{player.name}}:{{player.life}}</div>
               <div class="col-12">
-                <button class="btn-dark" @click="minusLife(player)">-1</button>
-                <button class="btn-dark" @click="addLife(player)">+1</button>
+                <h5>{{player.name}}:{{player.life}}</h5>
+
+                <div class="row justify-content-around">
+                  <div class="col-5">
+                    <button class="btn-dark spaced" @click="minusLife(player)">-1</button>
+                  </div>
+                  <div class="col-5">
+                    <button class="btn-dark spaced" @click="addLife(player)">+1</button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -48,4 +55,7 @@ export default {
 
 
 <style scoped>
+.spaced {
+  margin-left: 10px;
+}
 </style>
