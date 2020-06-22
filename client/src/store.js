@@ -35,7 +35,7 @@ export default new Vuex.Store({
       }
     },
 
-    getcards({ commit, dispatch }, cardName) {
+    getCards({ commit, dispatch }, cardName) {
       mtg.card.where({ name: cardName })
         .then(results => {
           console.log(results)
