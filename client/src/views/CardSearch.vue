@@ -1,7 +1,12 @@
 <template>
   <div class="cardSearch">
     <div class="container">
-      <div class="row"></div>
+      <div class="row">
+        <div class="col-8">
+          <input class="form-control" type="text" placeholder="Ach, run hans it's the....">
+           <button type="submit" class="btn btn-primary" >Submit</button>
+          </div>
+      </div>
     </div>
   </div>
 </template>
