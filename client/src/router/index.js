@@ -2,6 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 // @ts-ignore
 import Home from '../views/Home.vue'
+// @ts-ignore
+import cardSearch from '../views/CardSearch.vue'
 
 Vue.use(VueRouter)
 
@@ -10,6 +12,11 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/search',
+    name: 'cardSearch',
+    component: cardSearch
   },
   {
     path: '/about',
