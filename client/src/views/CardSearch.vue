@@ -12,6 +12,13 @@
           <button type="submit" class="btn btn-primary" @click="getCards(cardname)">Submit</button>
         </div>
       </div>
+      <div class="row">
+        <div class="col-12" v-for="card in cards" :key="card.id" >
+          <div class="row">
+            <div class="col-6">{{card.name}}</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
