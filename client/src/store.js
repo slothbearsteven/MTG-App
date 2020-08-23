@@ -8,7 +8,7 @@ export default new Vuex.Store({
     players: [{ id: 0, name: "player1", life: 20, counters: 0 }, { id: 1, name: "player2", life: 20, counters: 0 }],
     cards: [],
     currentCard: {},
-    hordeDeck: [{ token: true, name: "zombie", cardType: "creature", subtype: "zombie", power: 2, toughness: 2 }],
+    hordeDeck: [{ token: true, name: "Zombie", cardType: "creature", subtype: "zombie", power: 2, toughness: 2 }, { token: true, name: "Undead Golem", cardType: "creature", subtype: "zombie", power: 4, toughness: 4 }, { token: false, name: "The Horde's Hunger", cardtype: "instant", text: "Mill the top three cards of your library. Zombies you control get +1/+1 and haste until end of turn", modifier: 1, range: "each", mill: 3 }, {}],
     hordeField: []
 
   },
