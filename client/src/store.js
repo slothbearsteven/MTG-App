@@ -7,7 +7,10 @@ export default new Vuex.Store({
   state: {
     players: [{ id: 0, name: "player1", life: 20, counters: 0 }, { id: 1, name: "player2", life: 20, counters: 0 }],
     cards: [],
-    currentCard: {}
+    currentCard: {},
+    hordeDeck: [{ token: true, name: "zombie", cardType: "creature", subtype: "zombie", power: 2, toughness: 2 }],
+    hordeField: []
+
   },
   mutations: {
     setPlayer(state, payload) {
