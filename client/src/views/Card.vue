@@ -11,7 +11,7 @@ export default {
   },
   computed: {
     card() {
-      return this.$store.card;
+      return this.$store.currentCard;
     },
   },
   methods: {},
