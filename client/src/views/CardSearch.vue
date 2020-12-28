@@ -55,9 +55,6 @@ export default {
     getCards(cardname) {
       this.$store.dispatch("getCards", cardname);
     },
-    getSelectedCard(id) {
-      this.$store.dispatch("getCard", id);
-    },
   },
   components: {},
 };

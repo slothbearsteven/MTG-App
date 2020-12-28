@@ -20,7 +20,7 @@ export default {
     return {};
   },
   computed: {
-    card() {
+    Card() {
       return this.$store.currentCard;
     },
   },
