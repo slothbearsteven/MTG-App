@@ -17,7 +17,7 @@
       <br />
       <div class="row">
         <div class="col-12" v-for="card in cards" :key="card.id">
-          <div class="cardsMain row justify-content-around">
+          <div class="cardsMain row justify-content-around" @click="getCard">
             <div class="col-3 cardsSub">{{card.name}}</div>
             <div class="col-3 cardsSub">{{card.types.toString("")}}</div>
 
