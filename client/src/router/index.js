@@ -4,6 +4,8 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 // @ts-ignore
 import cardSearch from '../views/CardSearch.vue'
+// @ts-ignore
+import card from '../views/Card.vue'
 
 Vue.use(VueRouter)
 
@@ -17,6 +19,11 @@ const routes = [
     path: '/search',
     name: 'cardSearch',
     component: cardSearch
+  },
+  {
+    path: '/card/:cardId',
+    name: 'card',
+    component: card
   },
   {
     path: '/about',
