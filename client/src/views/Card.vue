@@ -2,7 +2,12 @@
   <div class="card">
     <div class="container">
       <div class="row">
-        <div class="col-8 justify-content-center">{{card.name}}</div>
+        <div v-if="card == ''" class="col-8 justify-content-center">
+          Please wait as we use a fetch spell
+        </div>
+        <div v-else>
+          <div class="col">{{ card.name }}</div>
+        </div>
       </div>
     </div>
   </div>
