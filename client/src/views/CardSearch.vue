@@ -10,25 +10,26 @@
             v-model="cardname"
           />
         </div>
-        <button type="submit" class="btn btn-primary" @click="getCards(cardname)">
+        <button
+          type="submit"
+          class="btn btn-primary"
+          @click="getCards(cardname)"
+        >
           <div class="col-2">Submit</div>
         </button>
       </div>
       <br />
       <div class="row">
         <router-link
-          :to="{name:'card' , params: {cardId:card.id}}"
+          :to="{ name: 'card', params: { cardId: card.id } }"
           class="col-12"
           v-for="card in cards"
           :key="card.id"
         >
-          <div class="cardsMain row justify-content-around">
-            <div class="col-3 cardsSub">{{card.name}}</div>
-            <div class="col-3 cardsSub">{{card.types.toString("")}}</div>
-
-            <div v-if="card.colors != '' " class="col-3 cardsSub">{{card.colors.toString()}}</div>
-            <div v-else class="col-3 cardsSub">Colorless</div>
-            <div class="col-3 cardsSub">{{card.setName}}</div>
+          <div class="cardsMain row">
+            <div class="col-6 cardsSub">{{ card.name }}</div>
+            <div class="col-3 cardsSub">{{ card.types.join() }}</div>
+            <div class="col-3 cardsSub">{{ card.setName }}</div>
           </div>
         </router-link>
         <br />

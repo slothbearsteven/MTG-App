@@ -16,6 +16,16 @@
 
 <script>
 export default {
+  //need to create reactivity
+  // var vm = new Vue({
+  // data: {
+  //     // declare message with an empty value
+  //     message: ''
+  //   },
+  //   template: '<div>{{ message }}</div>'
+  // })
+  // // set `message` later
+  // vm.message = 'Hello!'
   name: "card",
   mounted() {
     let cardId = this.$route.params.cardId;
